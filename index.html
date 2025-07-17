@@ -1,19 +1,77 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>API Search</title>
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
-  <h1>API Search</h1>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>API Search</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <h1>API Search</h1>
 
-  <select name="area-select" id="area-select">
-    <option value="">Select Area</option>
-  </select>
+    <!-- Add Random Recipe and Clear Filters buttons -->
+    <div style="text-align: center; margin-bottom: 16px">
+      <button
+        id="random-btn"
+        style="
+          padding: 10px 20px;
+          border-radius: 6px;
+          background: #f06292;
+          color: #fff;
+          border: none;
+          font-size: 1rem;
+          cursor: pointer;
+        "
+      >
+        Random Recipe
+      </button>
+      <button
+        id="clear-btn"
+        style="
+          padding: 10px 20px;
+          border-radius: 6px;
+          background: #ba68c8;
+          color: #fff;
+          border: none;
+          font-size: 1rem;
+          cursor: pointer;
+          margin-left: 10px;
+        "
+      >
+        Clear Filters
+      </button>
+    </div>
 
-  <div id="results"></div>
-  <script src="script.js"></script>
-</body>
+    <!-- New filter controls for beginners -->
+    <div
+      id="filters"
+      style="
+        display: flex;
+        flex-wrap: wrap;
+        gap: 12px;
+        justify-content: center;
+        margin-bottom: 16px;
+      "
+    >
+      <select id="category-select">
+        <option value="">Select Category</option>
+      </select>
+      <select id="ingredient-select">
+        <option value="">Select Ingredient</option>
+      </select>
+      <input
+        type="text"
+        id="name-input"
+        placeholder="Search by Name"
+        style="padding: 8px; border-radius: 4px; border: 1px solid #ccc"
+      />
+    </div>
+
+    <select name="area-select" id="area-select">
+      <option value="">Select Area</option>
+    </select>
+
+    <div id="results"></div>
+    <script src="script.js"></script>
+  </body>
 </html>
